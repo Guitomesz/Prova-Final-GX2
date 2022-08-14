@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
+.modal-content-edit {
+  margin: 9rem 0 0 25rem;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 3rem;
+}
+
+.btn {
+  background-color: #ffc501;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #adb5bd;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 53px;
+}
+
+.modal-edit {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.modal-body-edit img {
+  width: 150px;
+  height: 215px;
+}
+
+.modal-body-edit form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#editedBookImage {
+  grid-row: 1 / 4;
+}
+
+#editedBookSynopsis {
+  grid-row: 2 / 4;
+}
+
+.modal-body-edit input {
+  display: flex;
+  align-items: center;
+  text-indent: 0.5rem;
+  border: 2px solid #3e4756;
+  border-radius: 5px;
+}
+
+.modal-body-edit input[type="date"] {
+  text-indent: 0.3rem;
+}
+
+.modal-footer-edit {
+  display: flex;
+  gap: 2rem;
+  justify-content: right;
+}

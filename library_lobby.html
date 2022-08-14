@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="./css/library_lobby.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+
+</head>
+
+<body>
+
+    <section id="backgroundContainer">
+        <header>
+            <nav id="navBarContainer">
+                <img src="./src/assets/Logo.svg">
+                <article>
+                    <button type="button" class="userLogOut"><img id="userLogOutImg"
+                            src="./src/assets/person_black_24dp (1).svg">
+                        <div id="userName">Usuário</div><img src="./src/assets/Arrow.svg">
+                    </button>
+                    <div class="content">
+                        <button type="button" id="logOut"><a onclick="logout()">Sair</a></button>
+                    </div>
+                </article>
+            </nav>
+        </header>
+
+        <article id="mainContainerCards">
+
+            <a href="regBook.html">
+                <button class="optBtn" id="regBook">
+                    <img src="./src/assets/add_circle_FILL0_wght400_GRAD0_opsz48.svg">
+                    <div class="descOpt">
+                        <p>
+                            Cadastrar novo livro
+                        </p>
+                    </div>
+                </button>
+            </a>
+
+            <a href="library.html">
+                <button class="optBtn" id="library">
+                    <img src="./src/assets/import_contacts_FILL0_wght400_GRAD0_opsz48 (1).svg">
+                    <div class="descOpt">
+                        <p>
+                            Biblioteca
+                        </p>
+                    </div>
+                </button>
+            </a>
+
+            <a href="history.html">
+                <button class="optBtn" id="previousLends">
+                    <img src="./src/assets/pending_actions_FILL0_wght400_GRAD0_opsz48.svg">
+                    <div class="descOpt">
+                        <p>
+                            Histórico de empréstimos
+                        </p>
+                    </div>
+                </button>
+            </a>
+
+        </article>
+
+    </section>
+
+</body>
+<script src="./src/assets/js/header.js"></script>
+<script src="./src/assets/js/login.js"></script>
+<script src="./src/assets/js/lobby.js"></script>
+
+
+</html>

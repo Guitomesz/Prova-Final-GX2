@@ -1,0 +1,110 @@
+/* 
+
+#preview {
+
+}
+
+
+
+
+
+
+
+
+ */
+.file_up_area {
+  grid-row: 1 / 4;
+  width: 172px;
+  height: 210px;
+  border: 2px dashed #ffc501;
+}
+.file_up_area input {
+  position: absolute;
+  opacity: 0;
+  height: 205px;
+  width: 165px;
+}
+
+.file_area img {
+  position: absolute;
+  z-index: -2;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+  width: 170px;
+  height: 208px;
+}
+
+#imageFile {
+  width: 100%;
+  background: url(../src/assets/Caminho\ 261.svg) no-repeat center;
+  height: 100%;
+}
+
+.file_area textarea {
+  max-width: 600px;
+  height: 100px;
+  display: block;
+  margin-right: 0 auto;
+}
+
+#formContainerMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+#formContainer input:not(:first-child) {
+  border: 1px solid #133052;
+  border-radius: 5px;
+}
+
+#formContainer {
+  display: grid;
+  gap: 2.5rem;
+}
+
+#titleContainer,
+#authorContainer,
+#genreContainer,
+#entryContainer {
+  border: 5px solid red;
+  width: 350px;
+}
+
+#synopsisContainer {
+  grid-row: 2 / 4;
+}
+
+#entryContainer {
+  grid-row: 3 / 3;
+}
+
+#footer {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: right;
+  align-items: center;
+}
+
+#save {
+  cursor: pointer;
+  background: #ffc501;
+  border-radius: 5px;
+  width: 143px;
+  height: 53px;
+}
+
+#cancel {
+  cursor: pointer;
+  border: 1px solid #133052;
+  border-radius: 5px;
+  width: 143px;
+  height: 53px;
+}
+
+#buttonsReg {
+  display: flex;
+  margin-right: 17.3rem;
+  gap: 1rem;
+}

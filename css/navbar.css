@@ -1,0 +1,47 @@
+body,
+div,
+html,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.userLogOut {
+  display: flex;
+  align-items: center;
+  border: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #343a40;
+  background: #ffffff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #f4f4f4;
+}
+
+.content button {
+  position: fixed;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.content a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #2a2a2a;
+}

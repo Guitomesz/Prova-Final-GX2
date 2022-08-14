@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="./css/library.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/modalHist.css">
+    <link rel="stylesheet" href="./css/histTable.css">
+
+
+    <link rel="stylesheet" href="./css/modalMain.css">
+    <link rel="stylesheet" href="./css/modalLend.css">
+    <link rel="stylesheet" href="./css/modalEdit.css">
+    <link rel="stylesheet" href="./css/modalInactivate.css">
+    <link rel="stylesheet" href="./css/modalHist.css">
+
+
+
+</head>
+
+<body>
+    <div id="backgroundContainer">
+        <header>
+            <nav id="navBarContainer">
+                <div id="logo">
+                    <img src="./src/assets/Logo.svg">
+                </div>
+                <article id="userMenu">
+                    <button type="button" class="userLogOut">
+                        <img id="userLogOutImg" src="./src/assets/person_black_24dp (1).svg">
+                        <div id="userName">Usuário</div>
+                        <img src="./src/assets/Arrow.svg">
+                    </button>
+                    <div class="content">
+                        <button type="button" id="logOut">
+                            <a href="./index.html">Sair</a>
+                        </button>
+                    </div>
+                </article>
+            </nav>
+        </header>
+        <div class="mainContainer">
+
+            <span>
+                <a id="currentLocation" href="library_lobby.html">
+                    <img src="./src/assets/chevron_left_FILL0_wght400_GRAD0_opsz48.svg">
+                    Home
+                    <strong> / Biblioteca </strong>
+                </a>
+            </span>
+
+
+            <!-- SEARCH & FILTER -->
+            <div id="searchFilterContainer">
+
+                <form id="searchFilterContainer">
+                    <input type="text" id="searchBar" oninput="search((this.value).toLowerCase())"
+                        placeholder="Pesquisar livro...">
+                    <button id="test">Buscar</button>
+                </form>
+
+                <select id="filter" onchange="sortBooks();">
+                    <option value="0" hidden>Filtrar</option>
+                    <option value="1">Selecione</option>
+                    <option value="2">Gênero</option>
+                    <option value="3">Autor</option>
+                    <option value="4">Data de entrada</option>
+                </select>
+
+            </div>
+            <br>
+
+
+            <div id="booksDiv">
+
+            </div>
+
+            <div id="newBooksDiv">
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="./src/assets/js/main.js"></script>
+<script src="./src/assets/js/header.js"></script>
+<script src="./src/assets/js/library.js"></script>
+<script src="./src/assets/js/regBook.js"></script>
+<script src="./src/assets/js/history.js"></script>
+
+<script src="./src/assets/js/modal.js"></script>
+<script src="./src/assets/js/search-filter.js"></script>
+<script src="./src/assets/js/login.js"></script>
+
+<script id="lendbook-script">
+    function lendBook() {
+        event.preventDefault();
+        var lendToName = document.getElementById("lendToName").value;
+        var lendToClass = document.getElementById("lendToClass").value;
+        var givenBook = localStorage.getItem("booksGiven");
+        var lendOnDate = document.getElementById("lendOnDate").value;
+        var returnOnDate = document.getElementById("returnOnDate").value;
+
+        var rentHistory = JSON.parse(localStorage.getItem("rentHistory") || "[]");
+        rentHistory.push({
+            lendToName: lendToName,
+            lendToClass: lendToClass,
+            givenBook: givenBook,
+            lendOnDate: lendOnDate,
+            returnOnDate: returnOnDate,
+        });
+
+        if (
+            lendToName == "" ||
+            lendToClass == "" ||
+            givenBook == "" ||
+            lendOnDate == "" ||
+            returnOnDate == ""
+        ) {
+            alert("Favor preencher os espaços em branco.");
+            window.location.reload();
+        } else {
+            localStorage.setItem("rentHistory", JSON.stringify(rentHistory));
+            closeModal('openModalLend');
+
+
+            // console.log("Salva com sucesso.");
+        }
+        console.log(rentHistory.lendToName);
+    }
+
+</script>
+
+<script>
+
+</script>
+<script id="changeBookData">
+    function changeBookData() {
+        event.preventDefault();
+        var editedBookTitle = document.getElementById("editedBookTitle").value;
+        var editedBookAuthor = document.getElementById("editedBookAuthor").value;
+        var editedBookGenre = document.getElementById("editedBookGenre").value;
+        var editedBookSynopsis = document.getElementById("editedBookSynopsis").value;
+        var editedBookEntryDate = document.getElementById("editedBookEntryDate").value;
+
+        var editedBook = JSON.parse(localStorage.getItem("editedBook") || "[]");
+        editedBook.push({
+            editedBookTitle: editedBookTitle,
+            editedBookAuthor: editedBookAuthor,
+            editedBookGenre: editedBookGenre,
+            editedBookSynopsis: editedBookSynopsis,
+            editedBookEntryDate: editedBookEntryDate
+        });
+
+        if (
+            editedBookTitle == "" ||
+            editedBookAuthor == "" ||
+            editedBookGenre == "" ||
+            editedBookSynopsis == "" ||
+            editedBookEntryDate == ""
+        ) {
+            alert("Favor preencher os espaços em branco.");
+            window.location.reload();
+        } else {
+            localStorage.setItem("editedBook", JSON.stringify(editedBook));
+            closeModal('openModalLend');
+
+
+            // console.log("Salva com sucesso.");
+        }
+        console.log(editedBook.editedBookTitle)
+    }
+</script>
+<script id="changeBtnLendToReturn">
+    function changeBtnLend() {
+        document.getElementById("lendBook-Btn").innerHTML = "Devolver"
+        document.getElementById("lendBook-Btn").style.background = "#F4F4F4"
+        document.getElementById('lendBook-Btn').background = "src/assets/import_contacts_FILL0_wght400_GRAD0_opsz48 (1).svg";
+        document.getElementById("lendBook-Btn").style.border = "1px solid #ADB5BD"
+        document.getElementById("lendBook-Btn").addEventListener("click", function () {
+            openModal('openModal'), closeModal('openModalLend')
+            document.getElementById("imgBookBtn").src = "./src/assets/auto_stories_FILL0_wght400_GRAD0_opsz48 (1).svg"
+            document.getElementById("lendBook-Btn").style.backgroundColor = "#FFC501"
+        })
+
+    }
+</script>
+<script id="inactivateBtnFunction">
+    function inactivate() {
+        let inactivateMotive = document.getElementById("textInactivate").value
+        localStorage.setItem('inactivateReason', inactivateMotive)
+        let motivation = localStorage.getItem('inactivateReason')
+
+
+        document.getElementById("lendBook-Btn").setAttribute("disabled", "disabled");
+        document.getElementById("lendBook-Btn").style.cursor = "default";
+        document.getElementById("inactivateBook-Btn").innerHTML = "Ativar";
+
+
+        document.getElementById("histAndInactivateMotive").innerHTML = "<h4 style='color:#3E4756'>Informações da inativação</h4>" + "<h5 style='color:#3E4756'>Motivo</h5>" + "<h6 style='color:#3E4756'>" + motivation + "</h6>";
+        document.getElementById("histAndInactivateMotive").style.background = "#F4F4F4"
+
+        document.getElementById("inactivateBook-Btn").addEventListener("click", function () {
+            openModal('openModal'), closeModal('openModalInactivate')
+            document.getElementById("lendBook-Btn").removeAttribute("disabled", "disabled");
+            document.getElementById("inactivateBook-Btn").innerHTML = "Inativar"
+            document.getElementById("lendBook-Btn").style.cursor = "pointer"
+        })
+
+    }
+</script>
+
+<script>
+
+
+
+</script>
+
+
+</html>

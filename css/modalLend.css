@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+.btn {
+  background-color: #ffc501;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #adb5bd;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 53px;
+}
+
+.modal-lend {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+
+.modal-content {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 3rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: right;
+}
+
+.modal-header button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-body-lend {
+  width: 600px;
+}
+
+.modal-body-lend form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100px;
+  grid-gap: 1rem;
+}
+
+.modal-body-lend input {
+  border: 2px solid #3e4756;
+  border-radius: 5px;
+}
+
+.modal-body-lend input[type="date"] {
+  text-indent: 0.3rem;
+}
+
+.modal-footer-lend {
+  display: flex;
+  justify-content: right;
+}
+
+#lendBook-Btn {
+  width: 272px;
+}

@@ -1,0 +1,56 @@
+/* Top Header */
+body {
+  margin: 0 auto;
+  background: #f4f4f4;
+}
+
+
+
+/* Fim Top Header */
+
+/* Cards */
+
+#mainOptionsContainer {
+  display: flex;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 24rem;
+
+  justify-content: space-around;
+  background: white;
+}
+
+#optionsContainer {
+  display: flex;
+  border-radius: 5px;
+  gap: 2rem;
+}
+
+.CardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  border-radius: 5px;
+  width: 200px;
+  height: 204px;
+}
+
+.CardContainer p {
+  display: flex;
+  background: white;
+  font-size: 16px;
+}
+
+#cardContainer button{
+    border: transparent;
+    background: transparent;
+}
+
+#cardContainer a{
+  cursor: alias;
+}
+
+/* Fim Cards */
