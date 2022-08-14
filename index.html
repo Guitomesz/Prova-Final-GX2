@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Library</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+
+</head>
+
+<body>
+    <div class="backgroundContainer">
+
+        <div id="mainContainer">
+
+            <div id="modalContainer">
+
+                <img id="logo" src="./src/assets/Logo.svg">
+                <br>
+                <br>
+
+                <div id="modalInputContainer">
+                    <form id="form">
+
+                        <input class="loginInput" id="email" type="email" placeholder="E-mail" required>
+                        <br>
+                        <input class="loginInput" id="password" type="password" placeholder="Senha" required>
+                        <br>
+
+                        <div id="forgot">
+                            <span><a href="#">Esqueci minha senha</a></span>
+                            <br>
+
+                        </div>
+
+                        <input type="submit" id="login" placeholder="ENTRAR"
+                            onclick="logon(), session(); return false"></input>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="./src/assets/js/login.js"></script>
+<script src="./src/assets/js/main.js"></script>
+
+
+</html>

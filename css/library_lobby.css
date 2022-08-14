@@ -1,0 +1,39 @@
+#mainContainerCards {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+  height: 35.5rem;
+  padding-left: 3rem;
+  width: 80rem;
+  border: 10px solid #f4f4f4;
+}
+
+#mainContainerCards img {
+  width: 40px;
+  height: 40px;
+  margin: 3.5rem 0 3.5rem 0;
+}
+
+#mainContainerCards button {
+  border: 5px solid #f4f4f4;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#mainContainerCards button:hover {
+  cursor: pointer;
+  background: #ffc501;
+}
+
+.descOpt {
+  background: white;
+  font-size: 16px;
+  width: 200px;
+}
+
+.descOpt p {
+  line-height: 4rem;
+}
+
+/* Fim Cards */

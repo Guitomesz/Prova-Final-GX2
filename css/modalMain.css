@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+.btn {
+  background-color: #ffc501;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #adb5bd;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 53px;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.modal-content {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 3rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: right;
+}
+
+.modal-header button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-body {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.modal-body h3{
+  text-align: center;
+}
+
+.modal-body strong{
+ color: #3E4756;
+}
+
+.modal-body img {
+  width: 272px;
+  height: 450px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#lendBook-Btn {
+  width: 272px;
+}
+
+#editBook-Btn {
+  background: transparent;
+  border: 1px solid #167ce2;
+  color: #167ce2;
+}
+
+#inactivateBook-Btn {
+  background: transparent;
+  border: 1px solid #ed5e5e;
+  color: #ed5e5e;
+}
+
+#historicBook-Btn {
+  background: transparent;
+  border: 1px solid #adb5bd;
+  color: #000000;
+}

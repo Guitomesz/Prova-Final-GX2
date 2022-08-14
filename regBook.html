@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+
+    <link rel="stylesheet" href="./css/regBook.css">
+
+
+
+</head>
+
+<body>
+    <div id="overview">
+        <div id="backgroundContainer">
+            <header>
+                <nav id="navBarContainer">
+                    <img src="./src/assets/Logo.svg">
+                    <article>
+                        <button type="button" class="userLogOut">
+                            <img id="userLogOutImg" src="./src/assets/person_black_24dp (1).svg">
+                            <div id="userName">Usuário</div>
+                            <img src="./src/assets/Arrow.svg">
+                        </button>
+                        <div class="content">
+                            <button type="button" id="logOut">
+                                <a href="./index.html">Sair</a>
+                            </button>
+                        </div>
+                    </article>
+                </nav>
+            </header>
+
+            <div class="mainContainer">
+
+                <span>
+                    <a id="currentLocation" href="library_lobby.html">
+                        <img src="./src/assets/chevron_left_FILL0_wght400_GRAD0_opsz48.svg">
+                        Home
+                        <strong> / Cadastrar novo livro </strong>
+                    </a>
+                </span>
+
+                <br>
+                <div id="formContainerMain">
+                    <form id="formContainer">
+                        <div class="file_up_area">
+                            <input class="file_area" id="file" type="file" name="">
+                            <img id="imageFile" src="">
+                        </div>
+                        <input id="titleContainer" type="text" placeholder="Título"></input>
+                        <input id="authorContainer" type="text" placeholder="Autor"></input>
+                        <input id="synopsisContainer" type="text" placeholder="Sinopse"></input>
+                        <input id="genreContainer" type="text" placeholder="Gênero"></input>
+                        <input id="entryContainer" type="date"></input>
+                    </form>
+                </div>
+
+                <footer id="footer">
+                    <div id="buttonsReg">
+                        <button id="cancel" onclick="window.location.href = 'library_lobby.html'">Cancelar</button>
+                        <button id="save" onclick="addNewBook();">Salvar</button>
+                    </div>
+
+                </footer>
+
+            </div>
+        </div>
+</body>
+<script>
+
+
+</script>
+<script src="./src/assets/js/main.js"></script>
+<script src="./src/assets/js/header.js"></script>
+<script src="./src/assets/js/regBook.js"></script>
+<script src="./src/assets/js/library.js"></script>
+<script src="./src/assets/js/login.js"></script>
+
+</html>

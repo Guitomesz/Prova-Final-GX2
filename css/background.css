@@ -1,0 +1,25 @@
+#backgroundContainer {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 85rem;
+}
+
+.mainContainer {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 9px solid #f4f4f4;
+}
+
+#currentLocation img{
+  height: 12px;
+}
+
+#currentLocation{
+  color: #00000080;
+}
+
+#currentLocation strong{
+  color: #000000;
+}

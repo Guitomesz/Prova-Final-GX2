@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+.btn {
+  background-color: #ffc501;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #adb5bd;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 53px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: right;
+}
+
+.modal-header button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-body-Inactivate {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.modal-footer-Inactivate {
+  display: flex;
+  justify-content: right;
+  margin-right: 0.7rem;
+}
+
+#inactivateBook-Inactivate-Btn {
+  background: transparent;
+  border: 1px solid #ed5e5e;
+  color: #ed5e5e;
+}
+
+#textInactivate {
+  border: 1px solid #133052;
+  border-radius: 5px;
+  resize: none;
+  width: 582px;
+  height: 129px;
+}

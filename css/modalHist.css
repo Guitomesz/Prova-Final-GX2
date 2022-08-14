@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+.modal-content-hist {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-left: 20rem;
+  width: 50rem;
+  background-color: #ffffff;
+  padding: 3rem;
+}
+.modal-header button {
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-body-hist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.modal-hist {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#tableFilter button {
+  background: url(/src/assets/Caminho\ 147.png) no-repeat;
+  width: 105px;
+  height: 21px;
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+#tableFilter {
+  display: flex;
+}

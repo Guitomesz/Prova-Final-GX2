@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="./css/library.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/modalHist.css">
+    <link rel="stylesheet" href="./css/historyPage.css">
+
+
+</head>
+
+<body>
+    <div id="backgroundContainer">
+        <header>
+            <nav id="navBarContainer">
+                <img src="./src/assets/Logo.svg">
+                <article>
+                    <button type="button" class="userLogOut">
+                        <img id="userLogOutImg" src="./src/assets/person_black_24dp (1).svg">
+                        <div id="userName">Usuário</div>
+                        <img src="./src/assets/Arrow.svg">
+                    </button>
+                    <div class="content">
+                        <button type="button" id="logOut">
+                            <a href="./index.html">Sair</a>
+                        </button>
+                    </div>
+                </article>
+            </nav>
+        </header>
+        <div class="mainContainer">
+
+            <span>
+                <a id="currentLocation" href="library_lobby.html">
+                    <img src="./src/assets/chevron_left_FILL0_wght400_GRAD0_opsz48.svg">
+                    Home
+                    <strong> / Histórico de Empréstimos </strong>
+                </a>
+            </span>
+
+            <div class="body-Hist">
+                <br>
+
+                <h2>Histórico de empréstimos do livro</h2>
+                <br>
+                <table id="tableFilterPage">
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./src/assets/js/main.js"></script>
+<script src="./src/assets/js/header.js"></script>
+<script src="./src/assets/js/library.js"></script>
+
+<script src="./src/assets/js/history.js"></script>
+
+</html>

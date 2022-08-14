@@ -1,0 +1,54 @@
+#booksDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#newBooksDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#bookBackground {
+  width: 196px;
+  height: 261px;
+}
+
+#booksCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+#booksCard img {
+  margin-top: 2.3rem;
+  width: 108px;
+  height: 155px;
+}
+
+#booksCard p {
+  text-align: center;
+}
+
+#searchFilterContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+#searchBar {
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+}
+
+#filter {
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+}
